@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Manipulando Eventos</title>
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id='app'>
+        <button v-on:click='incrementar'>Clique</button>
+        <p>Botão clicado {{cliques}} vezes</p>
+        
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                cliques: 0
+            },
+            methods: {
+                incrementar:function(){
+                    this.cliques++
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>
